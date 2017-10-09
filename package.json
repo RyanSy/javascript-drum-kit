@@ -1,0 +1,15 @@
+{
+  "name": "javascript-drum-kit",
+  "version": "1.0.0",
+  "description": "a drum kit built with vanilla javascript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Sy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "serve-favicon": "^2.4.5"
+  }
+}
