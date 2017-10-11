@@ -1,9 +1,7 @@
 // play audio
 function playSound(e) {
-  var dataKey = e.path[1].getAttribute('data-key'); // data-key extracted from MouseEvent object
-  const audio = document.querySelector(`audio[data-key="${e.keyCode || dataKey}"]`); // selects audio element with specific data-key
-  const key = document.querySelector(`.key[data-key="${e.keyCode || dataKey}"]`); // selects key with specific data-key
-  const button = document.querySelector(`button[data-key="${dataKey}"]`);
+  const audio = document.querySelector(`audio[data-key="${e.keyCode || e.path[1].getAttribute('data-key')}"]`); // selects audio element with specific data-key
+  const key = document.querySelector(`.key[data-key="${e.keyCode || e.path[1].getAttribute('data-key')}"]`); // selects key with specific data-key
   if (!audio) return; // stop the function from running altogether
   audio.currentTime = 0; // rewind to the start
   audio.play(); // plays audio element
@@ -20,5 +18,4 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition)); //
 
 // event listeners to trigger audio
 window.addEventListener('keydown', playSound); // play sound when key is pressed
-window.addEventListener('mousedown', playSound); // play sound when button is pressed
-window.addEventListener('touchstart', playSound); // play sound when button is touched on a mobile device
+window.addEventListener('click', playSound); // play sound when key is clicked
