@@ -20,4 +20,5 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition)); //
 
 // event listeners to trigger audio
 window.addEventListener('keydown', playSound); // play sound when key is pressed
-window.addEventListener('click', playSound); // play sound when button is pressed
+window.addEventListener('mousedown', playSound); // play sound when button is pressed
+window.addEventListener('touchstart', playSound); // play sound when button is touched on a mobile device
