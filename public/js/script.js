@@ -18,4 +18,4 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition)); //
 
 // event listeners to trigger audio
 window.addEventListener('keydown', playSound); // play sound when key is pressed
-window.addEventListener('click', playSound); // play sound when key is clicked
+keys.forEach(key => key.addEventListener('click', playSound)); // bind click handler to each element
