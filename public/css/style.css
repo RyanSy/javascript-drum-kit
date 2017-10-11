@@ -30,6 +30,10 @@ body,html {
   text-shadow: 0 0 .5rem black;
 }
 
+.key:focus {
+  outline: none;
+}
+
 .playing {
   transform: scale(1.1);
   border-color: #ffc600;
